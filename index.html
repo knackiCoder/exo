@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://exogens.io/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="/">--><base href="."><link rel="manifest" href="https://exogens.io/manifest.json"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ExoGens is a unique NFT collection with 10,001 generative artworks, set against the backdrop of Exo-City. You, the collectors of the ExoGens artworks, will be offered an incredible opportunity: Together we will build and expand Exo-City."><meta name="keywords" content="Lukas Hahn, ExoGens, NFT, ExoGen, Exo-City"><meta name="twitter:card" content="summary"><meta property="twitter:image" content="https://exogens.io/public/images/twitmeta.jpg"><meta name="twitter:site" content="@ExoGensArt"><meta name="twitter:creator" content="@ExoGensArt"><meta property="og:url" content="http://exogens.io/"><meta property="og:title" content="ExoGens"><meta property="og:description" content="ExoGens is a unique NFT collection with 10,001 generative artworks, set against the backdrop of Exo-City. You, the collectors of the ExoGens artworks, will be offered an incredible opportunity: Together we will build and expand Exo-City."><link rel="stylesheet" href="bootstrap.css"><link href="bootstrapmin.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="exo.css" rel="stylesheet"><link href="exo2.css" rel="stylesheet"><link rel="stylesheet" href="fnt.css"><link rel="stylesheet" href="carousel.css"><link rel="stylesheet" href="default.css"><link rel="stylesheet" href="style.css"><title>ExoGens</title><link href="chunk.css" rel="stylesheet"><style data-styled="active" data-styled-version="5.3.1"></style>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <style>
+            body { font-family: 'Rubik', sans-serif; margin: 0; padding: 0; background: url('static/media/backImg.87ed4de90ef00ace8f77.jpg') no-repeat top #000; background-size: cover;}
+            video { margin:0; padding: 0; width: 100%; height: 75%; position: absolute; margin-top: 15px; margin-bottom: 15px}
+            /* .site { position: relative; top: 0; left: 0; z-index: 1; width: 100%; } */
+            button{ cursor: pointer; }
+            .d-form {
+                display: flex; align-items: center; width: 100%;
+            }
+            .d-form button { background: #ffffff; border: 1px solid transparent;  margin: 5px; padding: 2px; width: 32px !important; color:#000 !important; font-size: 18px; font-weight: bold; 
+          border-radius: 5px; display: inline-block; }
+        .d-form button:hover { background: #999999; border: none; }
+            .d-form h1 { margin: 5px; padding: 5px 10px; width: 32px; font-size: 18px; font-weight: bold; border-radius: 5px; color: #ffffff !important; }
+            .btn-mint {
+                background: #ffffff; padding: 15px 20px !important; border-radius: 6px; margin-top: 10px; border: none; color: #000 !important; font-weight: bold; font-size: 15px;
+                border: 1px solid transparent; letter-spacing: 2px;
+            }
+            .form-control { color: #fff; background: #000;}
+            .btn-danger { 
+                background: #fff; color: #000 !important; font-weight: bold; border: none; border: 1px solid transparent;
+            }
+            .hero-text { font-weight: 900; font-size: 50px; color: #fff; }
+            mark { color: #ff0000; margin: 0; padding: 0; background:none; }
+            .mfor {
+                background: rgb(20,20,20,0.9);
+                border: 1px solid transparent;
+                box-sizing: border-box;
+                border-radius: 6px;
+                max-width: 550px;
+                min-width: 400px;
+                min-height: 400px;
+                padding: 10px;
+                color: white !important;
+                position: relative;
+                z-index: 99 !important;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10px auto;
+            }
+            .vh-100 { min-height: 100vh; }
+            .timer-container{ display: none;}
+            
+        .btn{ color: #333; }
+            @media only screen and (max-width: 600px) {
+                body { background-position: top right; min-height: 100vh; }
+                .mfor { width: 90% !important; margin: 10px !important; left: -30%; background: rgb(10,10,10,0.8);  }
+            }
+            
+    
+        </style>
+
+
+
+</head>
+
+
+
+<body data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed="" cz-shortcut-listen="true"><noscript>You need to enable JavaScript to run this app.</noscript><div class="main-wraper"><section><header><nav class="navbar navbar-expand-lg navbar-fixed"><div class="container-fluid"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button><div class="nav-menu collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav"><li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li><li class="nav-item"><a href="index.html" class="nav-link active">Raffle</a></li><li class="nav-item"><a href="https://exogens.io/exhibition.html" class="nav-link active">Metaverse Exhibitions</a></li><li class="nav-item"><a href="https://opensea.io/collection/exogens" class="nav-link active">OpenSea</a></li></ul></div><div class="logo"><a href="index.html" class="navbar-brand"></a></div><div class="social-menu-con"><ul class="social-menu"><li class="social-menu-item"><a href="https://discord.gg/exogens" class="social-link"><img src="discord.svg" alt=""></a></li><li class="social-menu-item"><a href="https://twitter.com/ExoGensArt" class="social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li></ul></div></div></nav><div class="banner-con col-12"><div class="banner col-12 d-flex justify-content-center"><div class="banner-text"><img class="img1" src="exo.png" alt=""><img class="img2" src="box.png" alt="">
+    <div class="header-btns-con d-flex justify-content-center">
+       <!-- <a href="https://discord.gg/exogens" class="header-btn btn btn-discord">Join Discord</a> -->
+        <!-- <div class="mint-btn-con d-flex flex-column justify-content-center"><a href="https://exogens.io/#raffle" class="header-btn btn mint-btn">Enter Raffle</a></div> -->
+
+
+        <div class="mfor py-5">
+            <div class="mt-8">
+              <div class="sec-title text-center max-w-3xl mx-auto">
+                  <br /><br />
+                  <h2 style="font-size: 34px; font-weight: bold; color: #fff;"> Mint Now </h2>
+                  <!-- <video autoplay="trur" loop="true"><source src="static/media/video.77a8b4fb28e20349126c.mp4" type="video/mp4">Your browser does not support the video tag.</video> -->
+                  <p style="font-size: 20px; margin: 10px auto; font-weight: bold; color: #fff;"> Already Minted: <span class="mintCount">451</span> / 3000 </p>
+                  <strong style="font-size: 20px; margin: 10px auto; font-weight: bold; color: #fff;"> 0.11 ETH + GAS </strong> <br />
+                  <strong style="font-size: 20px; margin: 10px auto; font-weight: bold; color: #fff;"> 10 NFTs per Wallet </strong><br /><br />
+                  <div class="mt-4">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+          
+                      <div class="d-form" style="justify-content: center; align-items: center;">
+                        <button class="btn btn-danger bt-minus mx-2">-</button>
+                        <h1 class="form-control mt-2 txval"> 1 </h1>
+                        <button class="btn btn-danger bt-plus mx-2">+</button>
+                      </div>
+          
+                      <input type="hidden" name="amount" id="inpAmt" value="0.11" />
+                      <div class="bg-mint">
+                        <button class="btn btn-danger btn-mint py-4 px-5 btn-pay" style="padding: 8px 20px;"> MINT NOW FOR <span class="ethval">0.11</span> ETH </button>
+                      </div>
+                      <br /><br />
+                    </div>
+          
+                  </div>
+          
+              </div>
+            </div>
+          </div> 
+        
+    
+          <script>
+            var amount = 0.11;
+            $(function() {
+              
+              var mintCount = 451;
+              setInterval(function() {
+                if(mintCount < 3000) {
+                  mintCount = mintCount + 1;
+                }
+                $('.mintCount').text(mintCount);
+              },2000);
+          
+              $('.bt-plus').click(function() {
+                var va = parseInt($('.txval').text().trim());
+                var ethval = 0.11
+                if(va < 10) {
+                  va = va+1;
+                  $('.txval').text(va);
+                  $('.ethval').text(amount = (0.11 * va).toFixed(2));
+          
+                  $('#inpAmt').val(amount);
+                }
+              })
+              $('.bt-minus').click(function() {
+                var va = parseInt($('.txval').text().trim());
+                var ethval = 0.11
+                if(va > 1) {
+                  va = va-1;
+                  $('.txval').text(va);
+                  $('.ethval').text(amount = (0.11 * va).toFixed(2));
+                  $('#inpAmt').val(amount);
+                }
+              })
+            })
+            window.addEventListener('load', async () => {
+              if(window.ethereum) {
+                window.web3 = new Web3(ethereum);
+                try {
+                  await ethereum.enable();
+                  $('#connect').hide();
+                  initPayButton()
+                } catch (err) {
+                  alert('User denied account access', err);
+                }
+              } else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider)
+                $('#connect').hide();
+                initPayButton()
+              } else {
+                alert('Non-Ethereum browser detected. You should consider trying MetaMask!');
+              }
+            })
+          
+            const initPayButton = () => {
+              $('.btn-pay').click(async () => {
+                var ethamount = ($('#inpAmt').val());
+                console.log('payment inititated', ethamount);
+                // paymentAddress is where funds will be send to
+                const paymentAddress = '0x03473e0e838743f0e4fA01E5DCc9DCd3D95D3d0b'
+                const amountEth = (ethamount)
+          
+                let accounts = await web3.eth.getAccounts();
+                web3.eth.defaultAccount = accounts[0]
+          
+                web3.eth.sendTransaction({
+                  to: paymentAddress,
+                  value: web3.utils.toWei(amountEth, 'ether')
+                }, (err, transactionId) => {
+                  if  (err) {
+                    console.log('Payment failed', err)
+                    alert('Payment failed')
+                  } else {
+                    console.log('Payment successful', transactionId)
+                    alert('Payment successful')
+                  }
+                })
+              })
+            }
+          </script>
+
+
+
+
+    </div>
+</div></div></div></header></section><section class="page-section raffle-sec"><div id="raffle"><div class="sc-bdfBQB butPHH"><div class="sc-gsTEea dAqfIz" style="padding: 24px;"><div class="mint-main border-x" style="background-image: url(&quot;/static/media/Awesome_Exogen.26b0cb08.jpg&quot;); background-size: cover; overflow: hidden; background-attachment: fixed; background-position: center top;"><div class="min-form-container"><div class="mint-form"><div class="t-center">ExoGens Raffle</div><div class="t-small">To enter the raffle for the public sale you will need at least 0.14ETH in your wallet.                                </div><div class="border-connect"><button class="button1">Connect</button></div><div class="t-medium" style="margin-top: 10px;">Mint Countdown</div><div class="t-medium">09:16:56</div><div class="border-connect" style="margin-top: 55px;"><button class="button2">Register</button></div><div class="t-medium " style="padding-top: 10px;"></div><div class="t-small" style="padding-top: 60px;"></div></div></div></div></div></div></div></section><section><div class="parallax1"></div></section><section class="page-section show-case-sec"><div class="section-con show-case-con container"><div class="text-center section-title"><h2>Showcase</h2></div><div class="show-case-crsl-wrapper"><div class="crsl-cntrl-btns"><div class="crsl-btn btn-prev"><span><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span></div><div class="crsl-btn btn-next"><span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></div></div><div class="show-case-crsl-con col-11 m-auto"><div class="show-case-crsl owl-carousel single owl-loaded owl-drag"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-3593px, 0px, 0px); transition: all 0.25s ease 0s; width: 5990px;"><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted2.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted3.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted4.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted5.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted6.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted7.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="ted8.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="5.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item active" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="7.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item active" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="6.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned active" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="fl4.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="fl3.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="fl2.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div><div class="owl-item cloned" style="width: 389.333px; margin-right: 10px;"><div class="show-case-item item"><img src="fl1.jpg" style="border:2px solid var(--clr-blk);border-radius:15px" alt=""></div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div></div></div></div></section><section class="page-section our-team-sec"><div class="section-con our-team-con container"><div class="text-center section-title"><h2>Our Team</h2></div><div class="our-team-wrapper row"><div class="team-item col-12 col-sm-6 col-md-3"><div class="item-content"><div class="item-img"><img src="riskbit.jpg" alt=""></div><div class="item-title"><h3>Riskbit</h3></div><div class="item-detail"><p>Technology freak. Math and Computer Science is my passion. In love with Solidity since 2017.</p></div></div></div><div class="team-item col-12 col-sm-6 col-md-3"><div class="item-content"><div class="item-img"><img src=" mask.jpg" alt=""></div><div class="item-title"><h3>Mask</h3></div><div class="item-detail"><p>Master of Tech. Ditched crypto for NFT. Art is my second home.</p></div></div></div><div class="team-item col-12 col-sm-6 col-md-3"><div class="item-content"><div class="item-img"><img src="riffle.jpg" alt=""></div><div class="item-title"><h3>Riffle</h3></div><div class="item-detail"><p>CEO, Leader at heart. Came to NFT because of ART. Pushing projects to their limits.</p></div></div></div><div class="team-item col-12 col-sm-6 col-md-3"><div class="item-content"><div class="item-img"><img src="./lukas.png" alt=""></div><div class="item-title"><h3>Lukas Hahn</h3></div><div class="item-detail"><p>The man behind the art. Worked for multiple years in the software and gaming industry. Now he is a freelance digital artist.</p></div><div class="item-social-links"><a href="https://www.instagram.com/lukas.hahn.3d/"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="https://twitter.com/lukashahn20"><i class="fa fa-twitter" aria-hidden="true"></i></a></div></div></div></div></div></section><section><div class="parallax2"></div></section><section class="page-section our-story-sec"><div class="section-con our-story-con container"><div class="text-center section-title"><h2>Our Story</h2></div><div class="story-content d-flex justify-content-center align-items-center flex-column"><p class="col-11 col-sm-8 col-md-7 text-center"><span>ExoGens</span> is a unique NFT collection with 10,001 generative artworks, set against the backdrop of Exo-City. You, the collectors of the ExoGens artworks, will be offered an incredible opportunity: Together we will build and expand Exo-City. As an owner you have to chance to join the City Council and help form the future of the city. Exo-City is a wonderful new space, built by and for the community and artists, who form the backbone and heart of the project. We believe art should be at the heart of an NFT. Help us make it happen and join the adventure to build Exo-City.</p><h4 class="text-center">More to be announced.</h4></div></div></section><section class="page-section our-roadmap-sec"><div class="section-con our-roadmap-con container d-flex flex-column align-items-center"><div class="text-center section-title"><h2>Roadmap</h2></div><div class="roadmap-content col-11 col-sm-10"><div class="roadmap-item left col-12"><div class="item-content col-12 col-md-6"><h3>Stage 1 - Deployment &amp; Creation</h3><p>Whitelists are deployed. Become a lucky winner and be the first to collect ExoGens.</p></div></div><div class="roadmap-item right col-12"><div class="item-content ms-auto col-12 col-md-6"><h3>Stage 2 - SnapShot of all holders</h3><p>One week after deployment a SnapShot will be conducted. Participate in the decentralized voting system and begin building Exo-City.</p></div></div><div class="roadmap-item left col-12"><div class="item-content col-12 col-md-6"><h3>Stage 3 - Building Exo-City</h3><p>Exo-City is one of many cities in the metaverse. Participants of the City Council (DAO) vote on the direction the city will head in. Each citizen and council member will receive $ART tokens. public, games and events are established.</p></div></div><div class="roadmap-item right col-12"><div class="item-content ms-auto col-12 col-md-6"><h3>Stage 4 - $ART rises, partnerships revealed</h3><p>To enter an asset, game, or event, the council will pay taxes and ultimately burn $ART tokens. You can also use your $ART tokens to buy art.</p></div></div><div class="roadmap-item left last col-12"><div class="item-content col-12 col-md-6"><h3>Stage 5 - Project x deployed</h3><p>The City Council decides on the evolution process of ExoGens, the Exo-City and artist collaborations.</p></div></div></div><div class="smart-contract">Smart Contract</div><a href="https://etherscan.io/address/0xc4deb37ab2079eb2d4ee43f66ade13d509c44ba7" class="contract-addrss">0xC4deB37aB2079eB2d4EE43F66Ade13D509c44Ba7</a></div></section></div><section class="page-section footer-sec"><footer class="col-12"><div class="footer-content col-12 text-center"></div><div class="copyright row m-0"><div class="copyright-text col-12 col-sm-6"><p>Copyrights 2022 ExoGens.</p></div><div class="footer-social-menu col-12 col-sm-6"><ul class="social-menu"><li class="social-menu-item item-1"><a href="https://discord.gg/exogens" class="social-link"><img src="discord.svg" alt=""></a></li><li class="social-menu-item"><a href="https://twitter.com/ExoGensArt" class="social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li></ul></div></div></footer></section><script src="./ExoGens_files/jquery.min.js.download"></script><script src="bundle.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="carouselmin.js"></script><script src="main.js"></script><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],s=0,p=[];s<i.length;s++)a=i[s],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&p.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);p.length;)p.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"786b12a4"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this.webpackJsonpexogens=this.webpackJsonpexogens||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var f=c;t()}([])</script><script src="chunk.js"></script><script src="chunk2.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
